@@ -1,0 +1,51 @@
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.phonegap.MoxtraIntegration"
+      version="0.1.0">
+    <name>MoxtraIntegration</name>
+    <description>Moxtra Functionality Integrated</description>
+    <license>MIT</license>
+    <keywords>phonegap,MoxtraIntegration</keywords>
+ 
+ 
+    <js-module src="www/MoxtraIntegration.js" name="MoxtraIntegration">
+            <clobbers target="window.moxtra" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MoxtraIntegration">
+                <param name="ios-package" value="MoxtraIntegration"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MoxtraIntegration.h" />
+        <source-file src="src/ios/MoxtraIntegration.m" />
+        <source-file src="src/ios/MoxtraSDK.sdk/MoxtraSDK"  />
+        <header-file src="src/ios/MoxtraSDK.sdk/MoxtraSDK.h"  />
+        <resource-file src="src/ios/MoxtraSDK.sdk/MoxtraSDKResources.bundle" />
+
+       <framework src="libc++.dylib" />
+       <framework src="libstdc++.6.dylib" />
+       <framework src="libxml2.2.dylib" />
+       <framework src="SystemConfiguration.framework" />
+       <framework src="CoreMedia.framework" />
+       <framework src="Security.framework" />
+       <framework src="AddressBook.framework" />
+       <framework src="AddressBookUI.framework" />
+       <framework src="MapKit.framework" />
+       <framework src="MediaPlayer.framework" />
+       <framework src="MessageUI.framework" />
+       <framework src="QuartzCore.framework" />
+       <framework src="CoreLocation.framework" />
+       <framework src="MobileCoreServices.framework" />
+       <framework src="AudioToolbox.framework" />
+       <framework src="AssetsLibrary.framework" />
+       <framework src="AVFoundation.framework" />
+       <framework src="CFNetwork.framework" />
+       <framework src="CoreImage.framework" />
+       <framework src="CoreText.framework" />
+       <framework src="CoreVideo.framework" />
+       <framework src="ImageIO.framework" />
+    </platform>  
+</plugin>
