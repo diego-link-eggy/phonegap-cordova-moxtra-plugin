@@ -5,9 +5,16 @@
     <description>Moxtra Functionality Integrated</description>
     <license>MIT</license>
     <keywords>phonegap,MoxtraIntegration</keywords>
+    <author>Diego Link</author>
+    <repo>https://github.com/diego-link-eggy/phonegap-cordova-moxtra-plugin</repo>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+
  
- 
-    <js-module src="www/MoxtraIntegration.js" name="MoxtraIntegration">
+    <js-module src="www/moxtra-integration.js" name="MoxtraIntegration">
             <clobbers target="window.moxtra" />
     </js-module>
     
@@ -15,13 +22,13 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="MoxtraIntegration">
-                <param name="ios-package" value="MoxtraIntegration"/>
+                <param name="ios-package" value="APPMoxtraIntegration"/>
             </feature>
         </config-file>
 
-        <header-file src="src/ios/MoxtraIntegration.h" />
-        <source-file src="src/ios/MoxtraIntegration.m" />
-        <source-file src="src/ios/MoxtraSDK.sdk/MoxtraSDK"  />
+        <header-file src="src/ios/APPMoxtraIntegration.h" />
+        <source-file src="src/ios/APPMoxtraIntegration.m" />
+        <source-file src="src/ios/MoxtraSDK.sdk/MoxtraSDK" framework="true"  />
         <header-file src="src/ios/MoxtraSDK.sdk/MoxtraSDK.h"  />
         <resource-file src="src/ios/MoxtraSDK.sdk/MoxtraSDKResources.bundle" />
 

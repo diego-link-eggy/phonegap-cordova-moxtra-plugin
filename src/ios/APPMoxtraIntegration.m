@@ -6,17 +6,16 @@
 //
 //
 
-#import "MoxtraIntegration.h"
-#import “MoxtraSDK.h”
+#import "APPMoxtraIntegration.h"
 
-@implementation MoxtraIntegration
+@implementation APPMoxtraIntegration
 
 - (void) startmeet:(CDVInvokedUrlCommand*)command;
 {
 
   	[MoxtraSDK configWithClientId:@"YOUR_CLIENT_ID" andClientSecret:@ "YOUR_CLIENT_SECRET"];
-    
-	[MoxtraSDK moxtraStartMeetWithTopic:@"Expense Report" withSDKDelegate:self withRootViewController:self.viewController
+    NSString *topicArg = [command.arguments objectAtIndex:0];
+	[MoxtraSDK moxtraStartMeetWithTopic:topicArg withSDKDelegate:self withRootViewController:self.viewController
 	                            success:^(NSString *meetid){
 
 	                                //Get session details, do something

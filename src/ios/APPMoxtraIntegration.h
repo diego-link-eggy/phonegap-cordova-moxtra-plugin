@@ -7,9 +7,12 @@
 
 #import <Cordova/CDVPlugin.h>
 #import <Cordova/CDVInvokedUrlCommand.h>
+#import "MoxtraSDK.h"
 
-@interface MoxtraIntegration : CDVPlugin
 
-- (void) capture:(CDVInvokedUrlCommand*)command;
+@interface APPMoxtraIntegration : CDVPlugin <MoxtraSDKDelegate>
+
+- (void) startmeet:(CDVInvokedUrlCommand*)command;
 
 @end
+
