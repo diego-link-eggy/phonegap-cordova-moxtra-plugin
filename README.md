@@ -48,11 +48,11 @@ Usage Example.
 
               
             function onStartMoxtraMeet() {
-               console.log('start meet');
+               console.log('start meet callback');
             }
 
             function onEndMoxtraMeet() {
-                console.log('start meet');
+                console.log('end meet callback');
             }
             
    
